@@ -1,0 +1,80 @@
+{
+  "updated": "2025-10-24",
+  "schema": {
+    "id": "string", "category": "wine|food|other", "name": "string", "producer": "string",
+    "country": "string", "region": "string", "variety_or_ingredient": ["string"],
+    "style": "string", "vintage_or_spec": "string", "volume_or_weight": "string",
+    "tags": ["string"], "images": ["string"], "notes": "string",
+    "pairing_or_usage": ["string"], "price_range": "string"
+  },
+  "items": [
+    {
+      "id": "gr-assyrtiko-santorini-2023",
+      "category": "wine",
+      "name": "アシルティコ サントリーニ 2023",
+      "producer": "ガイア ワイナリー",
+      "country": "ギリシャ",
+      "region": "サントリーニ島",
+      "variety_or_ingredient": ["アシルティコ"],
+      "style": "白ワイン",
+      "vintage_or_spec": "2023",
+      "volume_or_weight": "750ml",
+      "tags": ["ミネラル","潮風","レモンの香り"],
+      "images": ["./assets/products/assyrtiko.jpg"],
+      "notes": "エーゲ海の潮風を思わせる塩味とミネラル感。爽やかな酸が魅力。",
+      "pairing_or_usage": ["魚介のカルパッチョ","レモンとハーブのサラダ"],
+      "price_range": "3,000〜4,000円"
+    },
+    {
+      "id": "gr-agiorgitiko-2022",
+      "category": "wine",
+      "name": "アギオルギティコ 2022",
+      "producer": "セメリス エステート",
+      "country": "ギリシャ",
+      "region": "ネメア",
+      "variety_or_ingredient": ["アギオルギティコ"],
+      "style": "赤ワイン",
+      "vintage_or_spec": "2022",
+      "volume_or_weight": "750ml",
+      "tags": ["チェリー","スパイス","柔らかなタンニン"],
+      "images": ["./assets/products/agiorgitiko.jpg"],
+      "notes": "熟した赤果実とスパイス香、丸みのあるタンニン。余韻は上品。",
+      "pairing_or_usage": ["ラムチョップのグリル","トマト煮込み"],
+      "price_range": "2,000〜3,000円"
+    },
+    {
+      "id": "it-neroavola-2021",
+      "category": "wine",
+      "name": "ネロ・ダーヴォラ 2021",
+      "producer": "プラネタ",
+      "country": "イタリア",
+      "region": "シチリア",
+      "variety_or_ingredient": ["ネロ・ダーヴォラ"],
+      "style": "赤ワイン",
+      "vintage_or_spec": "2021",
+      "volume_or_weight": "750ml",
+      "tags": ["ブラックチェリー","スパイシー","力強い"],
+      "images": ["./assets/products/neroavola.jpg"],
+      "notes": "凝縮した果実味と滑らかな舌触り。南イタリアの太陽を感じる1本。",
+      "pairing_or_usage": ["牛ほほ肉の赤ワイン煮","熟成チーズ"],
+      "price_range": "2,500〜3,500円"
+    },
+    {
+      "id": "gr-oliveoil-ev-500",
+      "category": "food",
+      "name": "エキストラバージンオリーブオイル 500ml",
+      "producer": "カラマタ協同組合",
+      "country": "ギリシャ",
+      "region": "ペロポネソス",
+      "variety_or_ingredient": ["コロネイキ種"],
+      "style": "オリーブオイル",
+      "vintage_or_spec": "酸度0.3%以下",
+      "volume_or_weight": "500ml",
+      "tags": ["青リンゴ","ハーブ","心地よい辛味"],
+      "images": ["./assets/products/oliveoil500.jpg"],
+      "notes": "青い果実の香りとキレのある辛味。料理の仕上げに最適。",
+      "pairing_or_usage": ["サラダ","白身魚","パン"],
+      "price_range": "1,800〜2,500円"
+    }
+  ]
+}
