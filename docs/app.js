@@ -11,6 +11,7 @@ btn?.addEventListener('click', () => {
 });
 
 // 将来ここに：
+// - fetch('/data/news.json') で #news のリストを描画（今は skeleton）
 // - fetch('/data/regions.json') で #travel のカードを描画
 // - 画像の遅延読み込み/最適化
-// - ルーティングや診断ウィジェットの読込 などを追加予定
+// - 個人/法人カードにCTAを配置
