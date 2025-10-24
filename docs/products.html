@@ -6,38 +6,44 @@
   <title>商品一覧｜YORUGOS</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=6" />
+  <link rel="stylesheet" href="./styles.css?v=7" />
 </head>
 <body>
   <header class="header">
     <div class="container nav">
       <a class="brand" href="./index.html"><span class="brand-mark"></span><span class="brand-title">YORUGOS</span></a>
       <nav class="nav-links"><a href="./contact.html" class="accent">お問い合わせ</a></nav>
+      <button class="menu-btn" aria-label="メニュー" aria-expanded="false">メニュー</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+      <a href="./index.html">トップへ</a>
+      <a href="./contact.html" class="accent">お問い合わせ</a>
     </div>
   </header>
 
   <main class="container">
     <section class="section-head" style="padding-top:24px">
       <h1 class="section-title serif">商品一覧</h1>
-      <p class="section-desc muted pretty">キーワード、カテゴリー、国・地域、スタイル、価格帯での絞り込み（デモ）</p>
+      <p class="section-desc muted pretty">キーワード、カテゴリー、国・地域、スタイル、価格帯での絞り込み（UIのみ）</p>
     </section>
 
-    <!-- Search / Filter box (UXのみ) -->
-    <section class="search-box card" style="padding:12px">
-      <form class="filters" action="#" role="search">
+    <!-- Search / Filter box (UIのみ) -->
+    <section class="search-box card" aria-label="検索フォーム">
+      <form class="filters" action="#" role="search" aria-describedby="filtersHint">
+        <p id="filtersHint" class="visually-hidden">入力または選択後、検索ボタンを押してください（デモ表示のみ）</p>
         <div class="filters-row">
-          <label>キーワード<input type="search" placeholder="生産者・品種・産地・商品名など"></label>
-          <label>カテゴリー<select><option>すべて</option><option>ワイン</option><option>食材</option><option>その他</option></select></label>
-          <label>国・地域<select><option>すべて</option><option>ギリシャ</option><option>イタリア</option></select></label>
-          <label>スタイル<select><option>すべて</option><option>白ワイン</option><option>赤ワイン</option><option>ロゼ</option><option>スパークリング</option><option>—</option></select></label>
-          <label>価格帯<select><option>すべて</option><option>〜2,000円</option><option>2,000〜3,000円</option><option>3,000円〜</option></select></label>
-          <button class="btn" type="button">検索（デモ）</button>
+          <label>キーワード<input id="q" type="search" placeholder="生産者・品種・産地・商品名など"></label>
+          <label>カテゴリー<select id="cat"><option>すべて</option><option>ワイン</option><option>食材</option><option>その他</option></select></label>
+          <label>国・地域<select id="cty"><option>すべて</option><option>ギリシャ</option><option>イタリア</option></select></label>
+          <label>スタイル<select id="sty"><option>すべて</option><option>白ワイン</option><option>赤ワイン</option><option>ロゼ</option><option>スパークリング</option><option>—</option></select></label>
+          <label>価格帯<select id="prc"><option>すべて</option><option>〜2,000円</option><option>2,000〜3,000円</option><option>3,000円〜</option></select></label>
         </div>
+        <div class="filters-actions"><button class="btn" type="button">検索（デモ）</button></div>
       </form>
     </section>
 
-    <!-- Grid（後で /data/products.json から描画） -->
-    <section class="grid" id="productsGrid" style="padding:16px 0">
+    <!-- Grid（/data/products.json から描画） -->
+    <section class="grid" id="productsGrid" aria-live="polite" style="padding:16px 0">
       <article class="card span-4 skeleton">&nbsp;</article>
       <article class="card span-4 skeleton">&nbsp;</article>
       <article class="card span-4 skeleton">&nbsp;</article>
@@ -48,6 +54,6 @@
   </main>
 
   <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
-  <script src="./app.js?v=6" defer></script>
+  <script src="./app.js?v=7" defer></script>
 </body>
 </html>
