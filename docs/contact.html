@@ -3,13 +3,24 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <title>お問い合わせ｜YORUGOS</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=6" />
+  <link rel="stylesheet" href="./styles.css?v=7" />
 </head>
 <body>
-  <header class="header"><div class="container nav"><a class="brand" href="./index.html"><span class="brand-mark"></span><span class="brand-title">YORUGOS</span></a></div></header>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="./index.html"><span class="brand-mark"></span><span class="brand-title">YORUGOS</span></a>
+      <button class="menu-btn" aria-label="メニュー" aria-expanded="false">メニュー</button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+      <a href="./index.html">トップへ</a>
+      <a href="./products.html">商品一覧</a>
+    </div>
+  </header>
+
   <main class="container">
     <section class="contact-hero">
       <h1 class="serif balance">お問い合わせ</h1>
@@ -38,6 +49,6 @@
     </section>
   </main>
   <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
-  <script src="./app.js?v=6" defer></script>
+  <script src="./app.js?v=7" defer></script>
 </body>
 </html>
