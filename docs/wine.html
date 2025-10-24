@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>商品詳細（デモ）｜YORUGOS for Business</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=4" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="./index.html"><span class="brand-mark"></span><span class="brand-title">YORUGOS for Business</span></a>
+      <nav class="nav-links"><a href="./wines.html">一覧へ戻る</a><a href="./contact.html" class="accent">お問い合わせ</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid" style="padding-top:24px">
+      <div class="card span-6 skeleton" style="min-height:260px">&nbsp;</div>
+      <div class="span-6" style="display:grid; gap:12px">
+        <h1 class="serif balance">（商品名の例）アシルティコ “サントリーニ” 2023</h1>
+        <p class="muted pretty">（生産者名・地域・品種・スタイル・容量などの要点を1行〜2行で）</p>
+        <div class="card" style="padding:12px">
+          <p class="pretty">テイスティングノートやペアリングの要点（3〜5行）。</p>
+        </div>
+        <div class="center-actions">
+          <a class="btn" href="./contact.html">在庫・見積を問い合わせる</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
+  <script src="./app.js?v=4" defer></script>
+</body>
+</html>

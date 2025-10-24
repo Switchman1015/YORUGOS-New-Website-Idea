@@ -1,0 +1,53 @@
+{
+  "updated": "2025-10-24",
+  "schema": {
+    "id": "string",
+    "name": "string",
+    "producer": "string",
+    "country": "string",
+    "region": "string",
+    "variety": ["string"],
+    "style": "white|red|rose|sparkling|other",
+    "vintage": "number",
+    "volume_ml": "number",
+    "tags": ["string"],
+    "images": ["string"],
+    "notes": "string",
+    "pairing": ["string"],
+    "price_range": "string"
+  },
+  "items": [
+    {
+      "id": "gr-assyrtiko-2023",
+      "name": "アシルティコ サントリーニ 2023",
+      "producer": "Sample Winery",
+      "country": "ギリシャ",
+      "region": "サントリーニ",
+      "variety": ["アシルティコ"],
+      "style": "white",
+      "vintage": 2023,
+      "volume_ml": 750,
+      "tags": ["ミネラル","海風"],
+      "images": ["./assets/wines/assyrtiko.jpg"],
+      "notes": "レモン、塩味、伸びやかな酸。",
+      "pairing": ["魚介","レモンとハーブの前菜"],
+      "price_range": "3,000-4,000"
+    },
+    {
+      "id": "gr-agiorgitiko-2022",
+      "name": "アギオルギティコ 2022",
+      "producer": "Sample Winery",
+      "country": "ギリシャ",
+      "region": "ペロポネソス",
+      "variety": ["アギオルギティコ"],
+      "style": "red",
+      "vintage": 2022,
+      "volume_ml": 750,
+      "tags": ["チェリー","スパイス"],
+      "images": ["./assets/wines/agiorgitiko.jpg"],
+      "notes": "チェリーやスパイスのニュアンス。",
+      "pairing": ["グリル肉","トマト煮込み"],
+      "price_range": "2,000-3,000"
+    }
+  ]
+}
