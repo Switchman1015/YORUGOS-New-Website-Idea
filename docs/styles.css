@@ -96,3 +96,10 @@ input,select,textarea{width:100%; padding:10px 12px; border-radius:10px; border:
 /* Skeleton */
 .skeleton{background:linear-gradient(90deg, var(--surface), color-mix(in srgb, var(--surface) 88%, white), var(--surface)); background-size:200% 100%; animation:shimmer 1.5s infinite}
 @keyframes shimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* 追記：件数表示とレイアウト補助 */
+.filters-meta{ display:flex; align-items:center; gap:10px; margin:10px 0 0 }
+@media (max-width:520px){ .filters-meta{ flex-wrap:wrap } }
+
+/* 新着の余白微調整（任意） */
+#new-arrivals .grid{ padding-top:8px }

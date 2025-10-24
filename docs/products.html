@@ -7,7 +7,7 @@
   <title>商品一覧｜YORUGOS</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=7" />
+  <link rel="stylesheet" href="./styles.css?v=8" />
 </head>
 <body>
   <header class="header">
@@ -41,6 +41,10 @@
         </div>
         <div class="filters-actions"><button class="btn" type="button">検索（デモ）</button></div>
       </form>
+      <div class="filters-meta">
+        <span id="resultsCount" class="muted">読み込み中…</span>
+        <button id="resetBtn" class="btn" type="button" style="margin-left:auto">条件をクリア</button>
+      </div>
     </section>
 
     <!-- Grid（/data/products.json から描画） -->
@@ -55,6 +59,6 @@
   </main>
 
   <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
-  <script src="./app.js?v=7" defer></script>
+  <script src="./app.js?v=8" defer></script>
 </body>
 </html>
