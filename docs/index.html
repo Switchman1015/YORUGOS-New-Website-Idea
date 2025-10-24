@@ -3,139 +3,160 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>YORUGOS｜ホームページ叩き台（レイアウト最小版＋NEWS）</title>
-  <link rel="stylesheet" href="./styles.css?v=1" />
+  <title>YORUGOS for Business｜業務用ワイン調達・卸のご相談</title>
+  <link rel="stylesheet" href="./styles.css?v=2" />
 </head>
 <body>
-  <!-- Header / Global Nav -->
+  <!-- Header / Global Nav (B2B特化) -->
   <header class="header">
     <div class="container nav">
       <a class="brand" href="#home" aria-label="YORUGOS">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-title balance">YORUGOS</span>
+        <span class="brand-title balance">YORUGOS for Business</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
-        <a href="#news">ニュース</a>
-        <a href="#travel">旅するワイン</a>
-        <a href="#collections">コレクション</a>
-        <a href="#stories">ストーリー</a>
-        <a href="#about">会社情報</a>
+        <a href="#solutions">ソリューション</a>
+        <a href="#portfolio">取扱ワイン</a>
+        <a href="#quality">品質・物流</a>
+        <a href="#process">導入までの流れ</a>
+        <a href="./contact.html" class="accent">お問い合わせ</a>
       </nav>
       <button class="menu-btn" aria-label="メニュー" aria-expanded="false">メニュー</button>
     </div>
     <div class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
-      <a href="#news">ニュース</a>
-      <a href="#travel">旅するワイン</a>
-      <a href="#collections">コレクション</a>
-      <a href="#stories">ストーリー</a>
-      <a href="#about">会社情報</a>
+      <a href="#solutions">ソリューション</a>
+      <a href="#portfolio">取扱ワイン</a>
+      <a href="#quality">品質・物流</a>
+      <a href="#process">導入までの流れ</a>
+      <a href="./contact.html" class="accent">お問い合わせ</a>
     </div>
   </header>
 
-  <!-- NEWS: ファーストビューで必ず目に入る位置 -->
-  <section id="news" class="news-bar" aria-live="polite" aria-label="最新のお知らせ">
-    <div class="container news-inner">
-      <div class="news-title no-wrap">最新のお知らせ</div>
-      <ul class="news-list">
-        <li class="skeleton short"></li>
-        <li class="skeleton short"></li>
-        <li class="skeleton short hide-sm"></li>
-      </ul>
-      <a class="news-more" href="#" aria-label="ニュース一覧へ">すべて</a>
+  <!-- Sticky CTA（モバイル優先：常に問い合わせ導線） -->
+  <div class="sticky-cta">
+    <div class="container" style="display:flex; gap:10px">
+      <a class="btn primary" href="./contact.html">見積・在庫問い合わせ</a>
+      <a class="btn" href="#solutions">サービスを見る</a>
+    </div>
+  </div>
+
+  <!-- Hero：法人向けコピー（短文、要件直行） -->
+  <section class="hero b2b">
+    <div class="container hero-inner">
+      <div class="hero-copy measure">
+        <h1 class="balance">業務用ワインの安定供給を、丁寧に。</h1>
+        <p class="muted pretty">小規模でも柔軟。定温管理・少量ミックス発注・スポット/定期どちらも対応。まずは在庫とリードタイムをご確認ください。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="./contact.html">今すぐ問い合わせる</a>
+          <a class="btn" href="#quality">品質・物流を見る</a>
+        </div>
+      </div>
+      <div class="hero-media skeleton" aria-hidden="true"></div>
     </div>
   </section>
 
-  <!-- Main -->
-  <main id="home" class="container">
-    <!-- Hero (大枠のみ) -->
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-copy measure">
-          <h1 class="balance">日本の食卓に、“旅するワイン体験”。</h1>
-          <p class="muted pretty">※ ここに短いリード文。のちにCTAボタンを配置。</p>
-        </div>
-        <div class="hero-media skeleton" aria-hidden="true"></div>
-      </div>
-    </section>
+  <!-- Quick Info（よくある要件3点） -->
+  <section id="highlights">
+    <div class="container grid">
+      <article class="card span-4 h-card">
+        <div class="h-card__head">最短リードタイム</div>
+        <div class="h-card__body skeleton">&nbsp;</div>
+      </article>
+      <article class="card span-4 h-card">
+        <div class="h-card__head">定温管理・輸送</div>
+        <div class="h-card__body skeleton">&nbsp;</div>
+      </article>
+      <article class="card span-4 h-card">
+        <div class="h-card__head">少量ミックス可</div>
+        <div class="h-card__body skeleton">&nbsp;</div>
+      </article>
+    </div>
+  </section>
 
-    <!-- ご利用案内：個人 / 法人 どちらにも配慮した導線（レイアウト枠） -->
-    <section id="for">
+  <!-- Solutions：想定業態別の入口（ホテル／レストラン／小売） -->
+  <section id="solutions">
+    <div class="container">
       <div class="section-head">
-        <h2 class="section-title">ご利用案内</h2>
-        <p class="section-desc muted pretty">※ 個人のお客様向け（EC/ギフト）と、法人のお客様向け（業務用/卸）の2導線を想定。</p>
+        <h2 class="section-title">ソリューション</h2>
+        <p class="section-desc muted pretty">ホテル・レストラン・ワインショップ向けに、価格帯と世界観を合わせた提案を行います。</p>
       </div>
       <div class="grid">
-        <article class="card span-6 for-card">
-          <div class="for-card__head">個人のお客様</div>
+        <article class="card span-4 for-card">
+          <div class="for-card__head">ホテル・宴席</div>
           <div class="for-card__body skeleton">&nbsp;</div>
         </article>
-        <article class="card span-6 for-card">
-          <div class="for-card__head">法人のお客様</div>
+        <article class="card span-4 for-card">
+          <div class="for-card__head">レストラン・バー</div>
+          <div class="for-card__body skeleton">&nbsp;</div>
+        </article>
+        <article class="card span-4 for-card">
+          <div class="for-card__head">小売・物販</div>
           <div class="for-card__body skeleton">&nbsp;</div>
         </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 旅するワイン（カードの並びだけ把握できる最小構成） -->
-    <section id="travel">
+  <!-- Portfolio：カテゴリの見え方のみ（後でJSON差替） -->
+  <section id="portfolio">
+    <div class="container">
       <div class="section-head">
-        <h2 class="section-title">旅するワイン</h2>
-        <p class="section-desc muted pretty">※ 後でJSONデータから描画予定。今はダミー枠のみ。</p>
-      </div>
-      <div class="grid">
-        <article class="card span-4 skeleton">&nbsp;</article>
-        <article class="card span-4 skeleton">&nbsp;</article>
-        <article class="card span-4 skeleton">&nbsp;</article>
-      </div>
-    </section>
-
-    <!-- コレクション（2カラムの確認用） -->
-    <section id="collections">
-      <div class="section-head">
-        <h2 class="section-title">今週のおすすめ</h2>
-        <p class="section-desc muted pretty">※ 画像＋テキスト＋ボタン構成想定。</p>
+        <h2 class="section-title">取扱ワイン（例）</h2>
+        <p class="section-desc muted pretty">ギリシャを中心に、ヨーロッパの個性派。後日、JSONから自動描画予定。</p>
       </div>
       <div class="grid">
         <article class="card span-6 skeleton">&nbsp;</article>
         <article class="card span-6 skeleton">&nbsp;</article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 読みもの（3カラムの確認用） -->
-    <section id="stories">
+  <!-- Quality / Logistics：信頼の根拠セクション -->
+  <section id="quality">
+    <div class="container">
       <div class="section-head">
-        <h2 class="section-title">読みもの</h2>
-        <p class="section-desc muted pretty">※ カード型記事のレイアウト検証。</p>
+        <h2 class="section-title">品質・物流</h2>
+        <p class="section-desc muted pretty">定温保管・輸送、破損率低減の梱包、ロット/ヴィンテージ管理など。</p>
       </div>
       <div class="grid">
         <article class="card span-4 skeleton">&nbsp;</article>
         <article class="card span-4 skeleton">&nbsp;</article>
         <article class="card span-4 skeleton">&nbsp;</article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- 会社情報（テキストブロックだけ） -->
-    <section id="about">
+  <!-- Process：問い合わせ〜初回納品までの流れ（可視化） -->
+  <section id="process">
+    <div class="container">
       <div class="section-head">
-        <h2 class="section-title">YORUGOSについて</h2>
-        <p class="section-desc muted pretty">※ 後で会社概要・連絡先を配置。</p>
+        <h2 class="section-title">導入までの流れ</h2>
+        <p class="section-desc muted pretty">最短での初回納品目安を、事前に共有します。</p>
       </div>
-      <div class="card" style="padding:16px">テキストブロック（ダミー）</div>
-    </section>
-  </main>
+      <ol class="process">
+        <li class="process-step"><span>1</span><div>お問い合わせ（要件・数量・納期）</div></li>
+        <li class="process-step"><span>2</span><div>在庫確認・お見積り</div></li>
+        <li class="process-step"><span>3</span><div>ご発注・納期確定</div></li>
+        <li class="process-step"><span>4</span><div>出荷・納品</div></li>
+      </ol>
+      <div class="center-actions">
+        <a class="btn primary" href="./contact.html">お問い合わせへ進む</a>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <nav class="links" aria-label="Footer">
-        <a href="#privacy">プライバシー</a>
-        <a href="#terms">利用規約</a>
-        <a href="#contact">お問い合わせ</a>
+        <a href="./contact.html">お問い合わせ</a>
+        <a href="#">会社情報</a>
+        <a href="#">プライバシー</a>
       </nav>
       <small class="muted">© <span id="y"></span> YORUGOS</small>
     </div>
   </footer>
 
-  <script src="./app.js?v=1" defer></script>
+  <script src="./app.js?v=2" defer></script>
 </body>
 </html>

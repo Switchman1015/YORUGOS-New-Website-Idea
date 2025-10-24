@@ -14,15 +14,12 @@ img{display:block; max-width:100%; height:auto}
 .muted{color:var(--muted)}
 .container{width:100%; max-width:var(--max); margin-inline:auto; padding-inline:16px}
 
-/* === 日本語の改行最適化（段落/見出し） === */
-:where(h1,h2,h3,h4,h5,h6){
-  line-height:1.25; word-break:keep-all; line-break:strict; /* 日本語の禁則を強めに */
-}
-.measure{ max-width:65ch; }
-.balance{ text-wrap:balance; }
-.pretty{ text-wrap:pretty; }
-.no-wrap{ white-space:nowrap; }
-/* fallback: 未対応ブラウザへ段落幅で回避 */
+/* 日本語の改行最適化 */
+:where(h1,h2,h3,h4,h5,h6){ line-height:1.25; word-break:keep-all; line-break:strict }
+.measure{ max-width:65ch }
+.balance{ text-wrap:balance }
+.pretty{ text-wrap:pretty }
+.no-wrap{ white-space:nowrap }
 @supports not (text-wrap:balance){ .balance{ display:inline-block } }
 
 /* Header */
@@ -31,24 +28,19 @@ img{display:block; max-width:100%; height:auto}
 .brand{display:flex; align-items:center; gap:10px; font-weight:700}
 .brand-mark{width:22px; height:22px; border-radius:8px; background:linear-gradient(135deg,var(--brand),var(--brand-2))}
 .nav-links{display:flex; gap:16px}
+.nav-links .accent{ font-weight:700 }
 .menu-btn{display:none; padding:8px 10px; border:1px solid var(--line); background:transparent; border-radius:10px}
 @media (max-width:880px){ .nav-links{display:none} .menu-btn{display:inline-flex} }
 .mobile-menu{display:none; border-top:1px solid var(--line); background:var(--bg)}
 .mobile-menu.open{display:block}
 .mobile-menu a{display:block; padding:14px 16px; border-bottom:1px solid var(--line)}
 
-/* NEWS bar */
-.news-bar{border-bottom:1px solid var(--line); background:color-mix(in srgb, var(--surface) 70%, white)}
-.news-inner{display:flex; align-items:center; gap:12px; height:44px}
-.news-title{font-size:14px; font-weight:700}
-.news-list{display:flex; gap:14px; list-style:none; padding:0; margin:0; flex:1; min-width:0}
-.news-list li{height:12px; border-radius:999px}
-.news-more{font-size:13px; color:var(--muted)}
-.hide-sm{ display:block }
-@media (max-width:600px){ .hide-sm{ display:none } .news-inner{height:auto; padding-block:8px; align-items:flex-start; flex-wrap:wrap} }
+/* Sticky CTA */
+.sticky-cta{position:sticky; bottom:0; z-index:40; background:color-mix(in srgb, var(--bg) 92%, transparent); border-top:1px solid var(--line); padding:10px 0}
+.btn{display:inline-flex; align-items:center; justify-content:center; padding:10px 14px; border-radius:12px; border:1px solid var(--line); background:var(--surface); font-weight:600}
+.btn.primary{background:var(--brand); color:#fff; border-color:transparent}
 
 /* Sections */
-main.container{padding-bottom:32px}
 section{padding:28px 0}
 .section-head{display:flex; align-items:end; justify-content:space-between; gap:12px; margin-bottom:16px}
 .section-title{font-size:20px; font-weight:700}
@@ -57,27 +49,45 @@ section{padding:28px 0}
 /* Hero */
 .hero-inner{display:grid; grid-template-columns: 1.1fr .9fr; gap:20px; padding:24px 0}
 .hero-copy h1{font-size: clamp(26px, 5vw, 44px); margin:0 0 8px}
-.hero-media{min-height:180px; border:1px dashed var(--line); border-radius:var(--radius-lg)}
+.hero-media{min-height:200px; border:1px dashed var(--line); border-radius:var(--radius-lg)}
+.hero.b2b{ background:color-mix(in srgb, var(--surface) 65%, white) }
 @media (max-width:880px){ .hero-inner{grid-template-columns:1fr} }
 
 /* Grid & Cards */
 .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px}
 .span-4{grid-column:span 4}
 .span-6{grid-column:span 6}
+.span-8{grid-column:span 8}
 .span-12{grid-column:span 12}
-@media (max-width:880px){ .span-4,.span-6{grid-column:span 12} }
+@media (max-width:880px){ .span-4,.span-6,.span-8{grid-column:span 12} }
 .card{background:var(--surface); border:1px dashed var(--line); border-radius:var(--radius); min-height:120px}
 
-/* For (個人/法人) */
+/* Highlights */
+.h-card__head{padding:10px 12px; font-weight:700; border-bottom:1px solid var(--line); background:color-mix(in srgb, var(--surface) 80%, white)}
+.h-card__body{min-height:100px}
+
+/* For (業態別) */
 .for-card{overflow:hidden}
 .for-card__head{padding:10px 12px; font-weight:700; border-bottom:1px solid var(--line); background:color-mix(in srgb, var(--surface) 80%, white)}
 .for-card__body{min-height:120px}
+
+/* Process */
+.process{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
+.process-step{display:flex; align-items:center; gap:10px; padding:14px; border:1px dashed var(--line); border-radius:12px; background:var(--surface)}
+.process-step span{display:inline-grid; place-items:center; width:28px; height:28px; border-radius:999px; background:var(--brand); color:#fff; font-weight:700}
+@media (max-width:880px){ .process{grid-template-columns:repeat(2,1fr)} }
+.center-actions{ margin-top:14px; display:flex; justify-content:center; gap:10px }
 
 /* Footer */
 .footer{border-top:1px solid var(--line); padding:20px 0 40px}
 .footer .links{display:flex; gap:14px; flex-wrap:wrap}
 
-/* Skeleton (中身空のレイアウト枠) */
+/* Skeleton */
 .skeleton{background:linear-gradient(90deg, var(--surface), color-mix(in srgb, var(--surface) 88%, white), var(--surface)); background-size:200% 100%; animation:shimmer 1.5s infinite}
-.skeleton.short{ height:12px; width: clamp(120px, 24vw, 260px); }
 @keyframes shimmer{ 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* Forms */
+.form{display:grid; gap:12px}
+.form-row label{display:grid; gap:6px}
+input,select,textarea{width:100%; padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:#fff}
+.form-actions{display:flex; gap:10px; flex-wrap:wrap}
