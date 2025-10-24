@@ -1,9 +1,17 @@
 :root{
-  --bg:#ffffff; --ink:#101114; --muted:#6d717b; --surface:#f5f7fb; --line:#e7e9f0;
-  --brand:#b21c4b; --brand-2:#1a77c1; --radius:14px; --radius-lg:22px; --max:1100px;
+  /* Palette derived from current site top: warm off-white + wine red + muted blue */
+  --bg:#f5f4ef;        /* page background (warm) */
+  --ink:#101114;       /* primary text */
+  --muted:#6d717b;     /* secondary text */
+  --surface:#ffffff;   /* card surface */
+  --line:#dedede;      /* hairline */
+  --brand:#c01e54;     /* wine red */
+  --brand-2:#526E91;   /* muted Aegean blue */
+  --radius:14px; --radius-lg:22px; --max:1100px;
 }
 @media (prefers-color-scheme: dark){
   :root{ --bg:#0f1014; --ink:#f5f6f8; --muted:#a8adb7; --surface:#161821; --line:#262a36 }
+}
 }
 *{box-sizing:border-box}
 html,body{height:100%}
