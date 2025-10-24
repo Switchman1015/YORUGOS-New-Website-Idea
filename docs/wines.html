@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>取扱ワイン一覧｜YORUGOS for Business</title>
+  <title>ワイン一覧｜YORUGOS for Business</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=4" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
 </head>
 <body>
   <header class="header">
@@ -18,24 +18,24 @@
 
   <main class="container">
     <section class="section-head" style="padding-top:24px">
-      <h1 class="section-title serif">取扱ワイン一覧</h1>
-      <p class="section-desc muted pretty">検索／絞り込み（デモ用UXのみ・動作は未実装）</p>
+      <h1 class="section-title serif">ワイン一覧</h1>
+      <p class="section-desc muted pretty">キーワード、国・地域、スタイル、価格帯での絞り込み（デモ）</p>
     </section>
 
-    <!-- Search / Filter box (UX only) -->
+    <!-- Search / Filter box (UXのみ) -->
     <section class="search-box card" style="padding:12px">
       <form class="filters" action="#" role="search">
         <div class="filters-row">
-          <label>キーワード<input type="search" placeholder="生産者名・品種・産地など"></label>
+          <label>キーワード<input type="search" placeholder="生産者・品種・産地など"></label>
           <label>国・地域<select><option>すべて</option><option>ギリシャ</option><option>イタリア</option></select></label>
-          <label>スタイル<select><option>すべて</option><option>白</option><option>赤</option><option>ロゼ</option><option>泡</option></select></label>
+          <label>スタイル<select><option>すべて</option><option>白ワイン</option><option>赤ワイン</option><option>ロゼ</option><option>スパークリング</option></select></label>
           <label>価格帯<select><option>すべて</option><option>〜2,000円</option><option>2,000〜3,000円</option><option>3,000円〜</option></select></label>
           <button class="btn" type="button">検索（デモ）</button>
         </div>
       </form>
     </section>
 
-    <!-- Grid (placeholder, later from /data/wines.json) -->
+    <!-- Grid（後で /data/wines.json から描画） -->
     <section class="grid" id="winesGrid" style="padding:16px 0">
       <article class="card span-4 skeleton">&nbsp;</article>
       <article class="card span-4 skeleton">&nbsp;</article>
@@ -47,6 +47,6 @@
   </main>
 
   <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
-  <script src="./app.js?v=4" defer></script>
+  <script src="./app.js?v=5" defer></script>
 </body>
 </html>

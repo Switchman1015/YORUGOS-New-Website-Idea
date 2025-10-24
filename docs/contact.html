@@ -6,80 +6,38 @@
   <title>お問い合わせ｜YORUGOS for Business</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=3" />
+  <link rel="stylesheet" href="./styles.css?v=5" />
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="./index.html" aria-label="YORUGOS">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-title balance">YORUGOS for Business</span>
-      </a>
-    </div>
-  </header>
-
+  <header class="header"><div class="container nav"><a class="brand" href="./index.html"><span class="brand-mark"></span><span class="brand-title">YORUGOS for Business</span></a></div></header>
   <main class="container">
     <section class="contact-hero">
       <h1 class="serif balance">お問い合わせ</h1>
       <p class="muted pretty">在庫・見積・リードタイムの確認など、お気軽にご連絡ください。</p>
     </section>
-
     <section class="grid">
       <div class="card span-8" style="padding:16px">
         <form class="form" action="./thanks.html" method="get">
-          <div class="form-row">
-            <label>会社名<span aria-hidden="true">*</span><input type="text" name="company" required></label>
-          </div>
-          <div class="form-row">
-            <label>ご担当者名<span aria-hidden="true">*</span><input type="text" name="name" required></label>
-          </div>
-          <div class="form-row">
-            <label>メールアドレス<span aria-hidden="true">*</span><input type="email" name="email" required></label>
-          </div>
-          <div class="form-row">
-            <label>電話番号<input type="tel" name="tel" inputmode="tel"></label>
-          </div>
-          <div class="form-row">
-            <label>お問い合わせ種別
-              <select name="type">
-                <option>在庫確認</option>
-                <option>お見積り</option>
-                <option>定期供給のご相談</option>
-                <option>その他</option>
-              </select>
-            </label>
-          </div>
-          <div class="form-row">
-            <label>ご要件（数量・希望納期など）<textarea name="message" rows="6" placeholder="例：〇月△日までに白×24本、赤×12本…"></textarea></label>
-          </div>
-          <div class="form-actions">
-            <button class="btn primary" type="submit">内容を送信する（仮）</button>
-            <a class="btn" href="mailto:info@example.com">メールで問い合わせる</a>
-          </div>
-          <p class="muted" style="margin-top:8px">※ GitHub Pages上ではフォーム送信ができないため、デモでは確認画面（thanks.html）へ遷移します。実運用は外部フォーム（Formspree等）と連携予定。</p>
+          <div class="form-row"><label>会社名<span aria-hidden="true">*</span><input type="text" name="company" required></label></div>
+          <div class="form-row"><label>ご担当者名<span aria-hidden="true">*</span><input type="text" name="name" required></label></div>
+          <div class="form-row"><label>メールアドレス<span aria-hidden="true">*</span><input type="email" name="email" required></label></div>
+          <div class="form-row"><label>電話番号<input type="tel" name="tel" inputmode="tel"></label></div>
+          <div class="form-row"><label>お問い合わせ種別<select name="type"><option>在庫確認</option><option>お見積り</option><option>定期供給のご相談</option><option>その他</option></select></label></div>
+          <div class="form-row"><label>ご要件（数量・希望納期など）<textarea name="message" rows="6" placeholder="例：〇月△日までに白×24本、赤×12本…"></textarea></label></div>
+          <div class="form-actions"><button class="btn primary" type="submit">内容を送信する（デモ）</button><a class="btn" href="mailto:info@example.com">メールで問い合わせる</a></div>
+          <p class="muted" style="margin-top:8px">※ デモでは `thanks.html` に遷移します。実運用は外部フォームと連携予定。</p>
         </form>
       </div>
-
       <aside class="card span-4" style="padding:16px">
         <h3 class="section-title serif">よくあるご質問</h3>
-        <ul class="faq">
-          <li>最短の納期は？（在庫有無で当日〜）</li>
-          <li>少量ミックス可？（可｜条件あり）</li>
-          <li>温度管理は？（定温保管・輸送）</li>
-        </ul>
+        <ul class="faq"><li>最短の納期は？（在庫有で当日〜）</li><li>少量ミックス可？（条件あり）</li><li>温度管理は？（定温保管・輸送）</li></ul>
         <div class="divider"></div>
         <h3 class="section-title serif">連絡先</h3>
         <p class="muted">メール：<a href="mailto:info@example.com">info@example.com</a></p>
       </aside>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <small class="muted">© <span id="y"></span> YORUGOS</small>
-    </div>
-  </footer>
-
-  <script src="./app.js?v=3" defer></script>
+  <footer class="footer"><div class="container"><small class="muted">© <span id="y"></span> YORUGOS</small></div></footer>
+  <script src="./app.js?v=5" defer></script>
 </body>
 </html>
